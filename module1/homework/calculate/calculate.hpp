@@ -3,5 +3,20 @@
 
 std::string calculate(const std::string& command, int first, int second) {
     // TODO: Implement your solution here and return proper value
-    return "";
+
+    if (command == "add") {
+        return std::to_string(first + second);
+    }
+    else if (command == "subtract") {
+        return std::to_string(first - second);
+    }
+    else if (command == "multiply") {
+        return std::to_string(first * second);
+    }
+    else if (command == "divide") {
+        // return std::to_string((double)(first / second));
+        // return std::to_string(first / second);
+        return second != 0 ? (std::to_string(first / second)) : "Division by 0";
+    }
+    return "Invalid data";
 }
